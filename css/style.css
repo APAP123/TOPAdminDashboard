@@ -1,9 +1,11 @@
 @import "normalize.css";
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    font-family: 'Poppins';
+    font-family: 'Roboto';
+    /* background-color: brown; */
     --main-color: rgb(67, 159, 144);
+    --bg-color: rgb(198, 226, 220);
   }
 
 .grid-container {
@@ -30,16 +32,121 @@
 }
 
 .header {
-    background-color: blue;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    /* background-color: blue; */
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 5rem;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.search-pane {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.search-pane img {
+    height: 2rem;
+}
+
+.search-box {
+    height: 2rem;
+    width: 100%;
+    border-radius: 16px;
+    border: 0px;
+    background-color: rgb(198, 226, 220);
+    padding-left: 1rem;
+}
+
+.greeting-pane {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column: 1 / 2;
+    grid-row: 2 /3;
+    padding-top: 1rem;
+}
+
+.greeting-message, .greeting-name {
+    display: flex;
+    font-weight: bold;
+}
+
+.greeting-message {
+    align-items: flex-end;
+}
+
+.greeting-name {
+    font-size: x-large;
+    align-items: flex-start;
+    padding-top: 0.75rem;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 15rem;
+}
+
+.user-info-name {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.notifications {
+    width: 35px;
+    height: 35px;
+}
+
+.thumbnail {
+    width: 50px;
+    border-radius: 100%;
+}
+
+.profile-pic {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+
+.profile-pic img {
+    width: 90px;
+    border-radius: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    background-color: var(--main-color);
+    border: 0px;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: larger;
 }
 
 .main-content {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    background-color: brown;
+    background-color: var(--bg-color);
 }
 
 .your-projects {
@@ -74,9 +181,4 @@
 
 .dashboard-icon {
     width: 100%;
-}
-
-.profile-pic img {
-    width: 5%;
-    height: 5%;
 }
